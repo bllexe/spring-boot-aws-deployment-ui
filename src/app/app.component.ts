@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'spring-boot-aws-deployment-UI';
+
+  constructor(private router:Router){
+  }
+  HomeClick(){
+    this.router.navigate(['Home']);
+  }
 }

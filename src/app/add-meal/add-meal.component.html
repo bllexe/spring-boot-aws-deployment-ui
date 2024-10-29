@@ -1,0 +1,66 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>New Meal</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i>
+                 Back</a>
+            </div>
+          </div>
+        </div>
+        <form #mealForm="ngForm">
+          <div class="table-content">
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="title" class="p-t-b-10">Title<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="title" required maxlength="255"
+                  [(ngModel)]="addMealForm.title" name="title" #title="ngModel">
+                <div *ngIf="title.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!title.errors?.['required']">
+                    Title Name is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label for="content" class="p-t-b-10">Content<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="content" required maxlength="255"
+                  [(ngModel)]="addMealForm.content" name="content" #content="ngModel">
+                <div *ngIf="content.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!content.errors?.['required']">
+                     Content is required
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group p-10 row">
+              <div class="col-sm-3">
+                <label class="p-t-b-10">Author<span class="requiredStar">*</span></label>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="author" required maxlength="255"
+                  [(ngModel)]="addMealForm.author" name="author" #author="ngModel">
+                <div *ngIf="author.errors && isSubmitted" class="alert alert-danger validationError">
+                  <div [hidden]="!author.errors?.['required']">
+                    Author is required
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-footer">
+            <button class="btn btn-success" (click)="addMeal(mealForm.form.valid)">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

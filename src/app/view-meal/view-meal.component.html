@@ -1,0 +1,61 @@
+<div class="container-xl">
+    <div class="table-responsive">
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-sm-6">
+              <h4><b>View Meals</b></h4>
+            </div>
+            <div class="col-sm-6">
+              <a href="#" routerLink="/Home" class="btn btn-success back"><i class='fas fa-arrow-circle-left'></i> &nbsp;Back</a>
+            </div>
+          </div>
+        </div>       
+        <table class="table table-striped table-hover table-bordered table-content">
+          <tbody>
+            <tr>
+              <td>
+                <label><b>Title</b></label>
+              </td>
+              <td>
+                <span>{{ mealDetail.title }}</span>              
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Content</b></label>
+              </td>
+              <td>
+                <span>{{ mealDetail.content }}</span>              
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Author</b></label>
+              </td>
+              <td>
+                <span>{{ mealDetail.author }}</span>              
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Created At</b></label>
+              </td>
+              <td>
+                <span>{{ mealDetail.created_at }}</span>              
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label><b>Updated At</b></label>
+              </td>
+              <td>
+                <span>{{ mealDetail.updated_at }}</span>              
+              </td>
+            </tr>
+          </tbody>
+        </table>       
+      </div>
+    </div>
+  </div>
+  
